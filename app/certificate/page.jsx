@@ -17,8 +17,6 @@ const journey = [
     description: "Customer Service with Python: Build a Chatbot using ChatGPT",
     image: "/assets/ct-2.png",
   },
-
-
 ];
 
 const Certificate = () => {
@@ -33,110 +31,106 @@ const Certificate = () => {
       }}
     >
       {/* heading */}
-      <div className="flex flex-col items-center justify-center w-full h-[200px]">
-        <h1 className="h1 mb-6">
+      <div className="flex flex-col pt-16 sm:pt-24 items-center justify-start w-full">
+        <h1 className="h1 mb-6 mt-10">
           Certificate <span className="text-accent">.</span>
         </h1>
       </div>
 
-      <ScrollArea className="h-[650px] md:h-[800px] w-full ">
+      <ScrollArea className="h-[700px] md:h-[700px] w-full ">
         <div className="container mx-auto px-0">
           <div className="relative flex flex-col gap-16">
-                  
             {/* line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/20 -translate-x-1/2 hidden md:block" />
 
             {journey.map((item, index) => {
-  const { description, name, date, image } = item;
+              const { description, name, date, image } = item;
 
-  return (
-    <div key={index} className="relative">
-      {/* ✅ Mobile layout */}
-      <div className="flex flex-col items-center gap-4 md:hidden">
-        <div
-          className="w-full max-w-[500px] h-[250px] relative cursor-pointer"
-          onClick={() => setSelectedImage(item.image)}
-        >
-          <Image
-            src={image}
-            alt={name}
-            fill
-            className="object-cover rounded-xl"
-          />
-        </div>
-        <div className="max-w-[500px]">
-          <p className="mb-2 text-white/50">{date}</p>
-          <p className="h4 mb-2">{name}</p>
-          <p className="text-base text-white/60">{description}</p>
-        </div>
-      </div>
+              return (
+                <div key={index} className="relative">
+                  <div className="flex flex-col items-center gap-4 md:hidden">
+                    <div
+                      className="w-full max-w-[500px] h-[250px] relative cursor-pointer"
+                      onClick={() => setSelectedImage(item.image)}
+                    >
+                      <Image
+                        src={image}
+                        alt={name}
+                        fill
+                        className="object-cover rounded-xl"
+                      />
+                    </div>
+                    <div className="max-w-[500px]">
+                      <p className="mb-2 text-white/50">{date}</p>
+                      <p className="h4 mb-2">{name}</p>
+                      <p className="text-base text-white/60">{description}</p>
+                    </div>
+                  </div>
 
-      {/* ✅ Desktop layout (timeline) */}
-      <div
-        className="
-          hidden md:grid 
-          grid-cols-[1fr_auto_1fr] items-center gap-8
-        "
-      >
-        {/* left or right image/text */}
-        {index % 2 === 0 ? (
-          <div className="flex justify-end">
-            <div
-              className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
-              onClick={() => setSelectedImage(item.image)}
-            >
-              <Image
-                src={image}
-                alt={name}
-                fill
-                className="object-cover rounded-xl"
-              />
-            </div>
-          </div>
-        ) : (
-          <div className="flex justify-end">
-            <div className="max-w-[500px]">
-              <p className="mb-2 text-white/50">{date}</p>
-              <p className="h4 mb-2">{name}</p>
-              <p className="text-lg text-white/60">{description}</p>
-            </div>
-          </div>
-        )}
+                  <div
+                    className="
+                        hidden md:grid 
+                        grid-cols-[1fr_auto_1fr] items-center gap-8
+                      "
+                  >
+                    {/* left or right image/text */}
+                    {index % 2 === 0 ? (
+                      <div className="flex justify-end">
+                        <div
+                          className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
+                          onClick={() => setSelectedImage(item.image)}
+                        >
+                          <Image
+                            src={image}
+                            alt={name}
+                            fill
+                            className="object-cover rounded-xl"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex justify-end">
+                        <div className="max-w-[500px]">
+                          <p className="mb-2 text-white/50">{date}</p>
+                          <p className="h4 mb-2">{name}</p>
+                          <p className="text-lg text-white/60">{description}</p>
+                        </div>
+                      </div>
+                    )}
 
-        {/* timeline marker */}
-        <div className="relative flex justify-center">
-          <div className="w-[2px] bg-white/20"></div>
-          <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full shadow-lg"></div>
-        </div>
+                    {/* timeline marker */}
+                    <div className="relative flex justify-center">
+                      <div className="w-[2px] bg-white/20"></div>
+                      <div className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-accent rounded-full shadow-lg"></div>
+                    </div>
 
-        {index % 2 === 0 ? (
-          <div className="flex justify-start">
-            <div className="max-w-[500px]">
-              <p className="mb-2 text-white/50">{date}</p>
-              <p className="h4 mb-2">{name}</p>
-              <p className="text-lg text-white/60">{description}</p>
-            </div>
-          </div>
-        ) : (
-          <div className="flex justify-start">
-            <div
-              className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
-              onClick={() => setSelectedImage(item.image)}
-            >
-              <Image
-                src={image}
-                alt={name}
-                fill
-                className="object-cover rounded-xl"
-              />
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-})}
-
+                    {index % 2 === 0 ? (
+                      <div className="flex justify-start">
+                        <div className="max-w-[500px]">
+                          <p className="mb-2 text-white/50">{date}</p>
+                          <p className="h4 mb-2">{name}</p>
+                          <p className="text-lg text-white/60">{description}</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex justify-start">
+                        <div
+                          className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
+                          onClick={() => setSelectedImage(item.image)}
+                        >
+                          <Image
+                            src={image}
+                            alt={name}
+                            fill
+                            className="object-cover rounded-xl"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </ScrollArea>
