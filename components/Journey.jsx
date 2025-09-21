@@ -14,8 +14,9 @@ const journey = [
 const Journey = () => {
   return (
     <div className="flex flex-col">
-      <h2 className="h2 mb-8">
-        Education & <span className="text-accent">Experience</span>
+      <h2 className="h2 mb-8 text-accent">
+        Education <span className="text-white">.</span>
+        {/* <span className="text-accent">Experience</span> */}
       </h2>
       {journey.map((item, index) => {
         const { institution, role, years } = item;

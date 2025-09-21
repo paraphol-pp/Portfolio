@@ -80,17 +80,17 @@ const projects = [
   },
   {
     id: 8,
-    category: "branding",
+    category: "freelance",
     title: "ISLogo DESIGNER",
-    description: "Elegant branding for a premium skincare product line",
+    description: "Created 200+ custom logos, brand identities, and social media graphics for gaming communities, clubs, teams, and small businesses. Managed a Facebook page ( ISLogo ) to attract clients, deliver projects, and maintain customer satisfaction.Strengthened skills in Photoshop,  and client communication, while balancing deadlines and quality.",
     image: "/assets/work/thumb8.png",
-    link: "",
+    link: "https://www.facebook.com/ISLogo.NAME",
     github: "",
-    tech: ["Photoshop", "Figma", "Canva"],
+    tech: ["Photoshop"],
   },
 ];
 
-const categories = ["frontend", "uiux", "branding", "python"];
+const categories = ["frontend", "uiux", "python", "freelance"];
 
 const Project = () => {
   return (
@@ -105,7 +105,8 @@ const Project = () => {
       <div className="container mx-auto w-full h-full flex flex-col">
         {/* heading */}
         <h2 className="h2 mb-6 xl:mb-12 max-w-[600px]">
-          My Latest <span className="text-accent">Work</span>
+          My Latest <span className="text-accent">Project</span> <span>&</span>{" "}
+  <span className="text-accent">Work</span>
         </h2>
 
         {/* tabs */}
