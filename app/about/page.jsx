@@ -46,9 +46,25 @@ const About = () => {
               iconStyles="w-[48px] h-[48px] text-[22px] text-accent hover:text-accent-hover transition-all flex items-center justify-center rounded-full cursor-pointer"
             />
           </div>
+
+
+          
           {/* scroll area */}
           <ScrollArea className="w-full h-[680px] ">
             <div>
+              
+            <div className="xl:hidden w-7/8 max-w-xs aspect-square mx-auto relative overflow-hidden rounded-full mb-10 shadow-2xl">
+              <Image
+                src="/assets/avatar-2.png"
+                alt=""
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+                
+
+
+              {/* details */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
                 <p>About me</p>

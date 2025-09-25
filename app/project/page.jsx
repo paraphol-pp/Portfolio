@@ -225,6 +225,8 @@ const Project = () => {
                                   fill
                                   className="object-cover"
                                 />
+                                
+
                               </div>
                             </div>
                           </SwiperSlide>

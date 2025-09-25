@@ -4,7 +4,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 import { useState } from "react";
 
-const journey = [
+const certificateImg = [
   {
     date: "Feb 21 2025",
     name: "Coursera - instructor network",
@@ -43,14 +43,14 @@ const Certificate = () => {
             {/* line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/20 -translate-x-1/2 hidden md:block" />
 
-            {journey.map((item, index) => {
+            {certificateImg.map((item, index) => {
               const { description, name, date, image } = item;
 
               return (
                 <div key={index} className="relative">
                   <div className="flex flex-col items-center gap-4 md:hidden">
                     <div
-                      className="w-full max-w-[500px] h-[250px] relative cursor-pointer"
+                      className="w-full max-w-[500px] h-[250px] relative"
                       onClick={() => setSelectedImage(item.image)}
                     >
                       <Image
@@ -64,6 +64,13 @@ const Certificate = () => {
                       <p className="mb-2 text-white/50">{date}</p>
                       <p className="h4 mb-2">{name}</p>
                       <p className="text-base text-white/60">{description}</p>
+
+                      <a href={item.image} target="_blank" rel="noopener noreferrer">
+                        <button className="mt-2 px-6 py-2 rounded-lg bg-accent text-white cursor-pointer font-semibold hover:bg-accent/80 duration-300">
+                          View Certificate
+                        </button>
+                      </a>
+
                     </div>
                   </div>
 
@@ -77,7 +84,7 @@ const Certificate = () => {
                     {index % 2 === 0 ? (
                       <div className="flex justify-end">
                         <div
-                          className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
+                          className="w-full max-w-[500px] h-[350px] relative"
                           onClick={() => setSelectedImage(item.image)}
                         >
                           <Image
@@ -94,6 +101,13 @@ const Certificate = () => {
                           <p className="mb-2 text-white/50">{date}</p>
                           <p className="h4 mb-2">{name}</p>
                           <p className="text-lg text-white/60">{description}</p>
+
+                          <a href={item.image} target="_blank" rel="noopener noreferrer">
+                            <button className="mt-2 px-6 py-2 rounded-lg bg-accent text-white cursor-pointer font-semibold hover:bg-accent/80 duration-300">
+                              View Certificate
+                            </button>
+                          </a>
+                          
                         </div>
                       </div>
                     )}
@@ -110,12 +124,19 @@ const Certificate = () => {
                           <p className="mb-2 text-white/50">{date}</p>
                           <p className="h4 mb-2">{name}</p>
                           <p className="text-lg text-white/60">{description}</p>
+
+                          <a href={item.image} target="_blank" rel="noopener noreferrer">
+                            <button className="mt-2 px-6 py-2 rounded-lg bg-accent text-white cursor-pointer font-semibold hover:bg-accent/80 duration-300">
+                              View Certificate
+                            </button>
+                          </a>
+
                         </div>
                       </div>
                     ) : (
                       <div className="flex justify-start">
                         <div
-                          className="w-full max-w-[500px] h-[350px] relative cursor-pointer"
+                          className="w-full max-w-[500px] h-[350px] relative"
                           onClick={() => setSelectedImage(item.image)}
                         >
                           <Image
@@ -135,30 +156,7 @@ const Certificate = () => {
         </div>
       </ScrollArea>
       {/* Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 cursor-pointer"
-          onClick={() => setSelectedImage(null)}
-        >
-          {/* ปุ่มปิด */}
-          <button
-            className="absolute top-10 right-20 text-white text-3xl font-bold hover:text-accent duration-300 cursor-pointer"
-            onClick={() => setSelectedImage(null)}
-          >
-            ✕
-          </button>
-
-          {/* รูปใหญ่ */}
-          <div className="relative w-[90%] max-w-4xl h-[80%]">
-            <Image
-              src={selectedImage}
-              alt="Certificate"
-              fill
-              className="object-contain"
-            />
-          </div>
-        </div>
-      )}
+      
     </motion.section>
   );
 };
