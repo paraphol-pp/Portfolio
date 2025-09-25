@@ -18,9 +18,9 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.8, duration: 0.4, ease: "easeIn" },
       }}
-      className="h-screen flex items-center"
+      className="flex items-center min-h-screen pt-5 md:pt-0"
     >
       <div className="container mx-auto px-0">
         <div className="flex flex-col xl:flex-row items-center gap-24 w-full h-[680px] ">

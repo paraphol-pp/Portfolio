@@ -19,13 +19,13 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.8, duration: 0.4, ease: "easeIn" },
       }}
       className="h-screen flex items-center"
     >
       {/* pattern */}
       <Pattern />
-      <div className="flex flex-col xl:flex-row items-center justify-between w-full">
+      <div className="flex flex-col pt-10 xl:pt-0 xl:flex-row items-center justify-between w-full">
         {/* text */}
         <div className="w-full xl:w-[550px] flex flex-col items-center justify-center xl:items-start text-center xl:text-left">
           <h1 className="h1 flex-1 mb-[28px]">

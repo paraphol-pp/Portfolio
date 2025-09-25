@@ -26,7 +26,7 @@ const Ractangle = () => {
         exit="exit"
         transition={{
           delay: 0,
-          duration: 0.6,
+          duration: 0.5,
           ease: [0.63, 0, 0.17, 1],
         }}
         className="fixed top-full w-screen h-screen z-30 bg-[#1b162b]"
@@ -38,7 +38,7 @@ const Ractangle = () => {
         animate="animate"
         exit="exit"
         transition={{
-          delay: 0.25,
+          delay: 0.1,
           duration: 0.8,
           ease: [0.63, 0, 0.17, 1],
         }}
@@ -51,7 +51,7 @@ const Ractangle = () => {
         animate="animate"
         exit="exit"
         transition={{
-          delay: 0.35,
+          delay: 0.20,
           duration: 1,
           ease: [0.63, 0, 0.17, 1],
         }}
@@ -64,7 +64,7 @@ const Ractangle = () => {
         animate="animate"
         exit="exit"
         transition={{
-          delay: 0.45,
+          delay: 0.30,
           duration: 1,
           ease: [0.63, 0, 0.17, 1],
         }}

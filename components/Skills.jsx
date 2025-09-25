@@ -7,15 +7,14 @@ import {
   RiJavascriptFill,
 } from "react-icons/ri";
 
-import { 
-  BiDatabase
-} from "react-icons/bi";
+import { BiLogoTypescript } from "react-icons/bi";
 
 import {
   SiAdobephotoshop,
   SiFigma,
   SiAdobepremierepro,
   SiAdobeillustrator,
+  SiDotnet,
 } from "react-icons/si";
 
 import {
@@ -25,81 +24,73 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 
-import { FaDatabase } from "react-icons/fa";
+import { FaDatabase, FaPython, FaJava } from "react-icons/fa";
 
-const skills = [
-  {
-    icon: <RiReactjsFill />,
-    name: "React.js",
-  },
-  {
-    icon: <RiNextjsFill />,
-    name: "Next.js",
-  },
-  {
-    icon: <RiHtml5Fill />,
-    name: "HTML 5",
-  },
-  {
-    icon: <RiCss3Fill />,
-    name: "CSS 3",
-  },
-  {
-    icon: <RiJavascriptFill />,
-    name: "Javascript",
-  },
+import { TbBrandCSharp } from "react-icons/tb";
 
+const skillCategories = [
   {
-    icon: <RiTailwindCssFill />,
-    name: "Tailwind CSS",
-  },
-  
-  {
-    icon: <SiFigma />,
-    name: "Figma",
-  },
-  {
-    icon: <SiAdobephotoshop />,
-    name: "Photoshop",
-  },
-  {
-    icon: <SiAdobepremierepro />,
-    name: "Premiere Pro",
+    title: "Frontend Development",
+    items: [
+      { icon: <RiHtml5Fill />, name: "HTML 5" },
+      { icon: <RiCss3Fill />, name: "CSS 3" },
+      { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <BiLogoTypescript />, name: "TypeScript" },
+      { icon: <RiReactjsFill />, name: "React.js" },
+      { icon: <RiNextjsFill />, name: "Next.js" },
+    ],
   },
   {
-    icon: <SiAdobeillustrator />,
-    name: "Illustrator",
+    title: "Programming & Backend",
+    items: [
+      { icon: <FaPython />, name: "Python" },
+      { icon: <FaJava />, name: "Java" },
+      { icon: <TbBrandCSharp />, name: "C#" },
+      { icon: <SiDotnet />, name: ".NET" },
+      { icon: <FaDatabase />, name: "SQLite" },
+    ],
   },
   {
-    icon: <FaDatabase />,
-    name: "SQLite",
+    title: "UI/UX & Design",
+    items: [
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <SiAdobephotoshop />, name: "Photoshop" },
+      { icon: <SiAdobeillustrator />, name: "Illustrator" },
+      { icon: <SiAdobepremierepro />, name: "Premiere Pro" },
+    ],
   },
-  
 ];
 
 const Skills = () => {
   return (
     <div>
-      <h2 className="h2 mb-8">
-        My <span className="text-accent">Skills</span>
+      <h2 className="h2 mb-8 text-accent">
+        Skills <span className="text-white">.</span>
       </h2>
-      <div className="flex flex-wrap gap-6 max-w-sm xl:max-w-none">
-        {skills.map((item, index) => {
-          return (
-            <TooltipProvider key={index}>
-              <Tooltip>
-                <TooltipTrigger className="w-16 h-16 rounded-full flex items-center justify-center bg-tertiary/70 group">
-                  <div className="text-3xl group-hover:text-accent transition-all duration-300">
-                    {item.icon}
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-lg">{item.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          );
-        })}
+
+      <div className="space-y-10">
+        {skillCategories.map((category, i) => (
+          <div key={i}>
+            <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
+            <div className="flex flex-wrap gap-6">
+              {category.items.map((item, index) => (
+                <TooltipProvider key={index}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-16 h-16 rounded-full flex items-center justify-center bg-tertiary/70 group">
+                      <div className="text-3xl group-hover:text-accent transition-all duration-300">
+                        {item.icon}
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-lg">{item.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: <BiLogoLinkedin />,
-    path: "https://www.linkedin.com/in/paraphol-puangpee-65a83b384",
+    path: "https://www.linkedin.com/in/paraphol-pp",
   },
   {
     icon: <BiLogoGithub />,
