@@ -3,11 +3,13 @@ const journey = [
     years: "2022 - Present",
     role: "Computer Science",
     institution: "Bangkok University",
+    grade: "> GPA 3.42",
   },
   {
-    years: "2015 - 2021",
-    role: "High School Student (Math-Science Program)",
+    years: "2018 - 2021",
+    role: "Math-Science Program",
     institution: "Selaphum Pittayakom School",
+    grade: "",
   },
 ];
 
@@ -19,7 +21,7 @@ const Journey = () => {
         {/* <span className="text-accent">Experience</span> */}
       </h2>
       {journey.map((item, index) => {
-        const { institution, role, years } = item;
+        const { institution, role, years, grade } = item;
         return (
           <div key={index} className="flex items-center gap-12 w-full">
             {/* bullets */}
@@ -32,6 +34,7 @@ const Journey = () => {
               <p className="mb-6 text-white/50">{years}</p>
               <p className="h4 mb-2">{role}</p>
               <p className="text-lg text-white/50">{institution}</p>
+              <p className="text-lg text-white">{grade}</p>
             </div>
           </div>
         );
