@@ -31,6 +31,17 @@ const projects = [
   {
     id: 2,
     category: "frontend",
+    title: "Website Job Board",
+    description:
+      "A mini project job board website built for academic submission. Features job listings with detail pages, applicant form submission, and a responsive layout using HTML, TailwindCSS, and JavaScript. Designed to simulate a basic job-seeking platform with clean UI and simple interactivity.",
+    image: "/assets/work/thumb9.png",
+    link: "https://job-board-flame-chi.vercel.app",
+    github: "https://github.com/paraphol-pp/Job-board-html-tailwind",
+    tech: ["HTML", "TailwindCSS", "JavaScript"],
+  },
+  {
+    id: 3,
+    category: "frontend",
     title: "Website E-Commerce",
     description:
       "A one-page e-commerce website built with pure HTML and CSS during my early learning stage. Features a product showcase, simple navigation, and responsive layout practice.",
@@ -40,7 +51,7 @@ const projects = [
     tech: ["HTML", "CSS"],
   },
   {
-    id: 3,
+    id: 4,
     category: "python",
     title: "Zeppelin Cafe",
     description:
@@ -64,6 +75,17 @@ const projects = [
   {
     id: 6,
     category: "uiux",
+    title: "Hotel Management",
+    description:
+      "A desktop hotel booking app in Java and NetBeans, featuring reservation management, check-in/out, and payments. Designed a user-friendly UI/UX in Figma with clear navigation and consistent workflows.",
+    image: "/assets/work/thumb11.png",
+    link: "https://www.figma.com/design/OJGjZ7sZvaZ6wdyriJvLuM/Project?node-id=0-1&p=f&t=yUZfSuMsYrnoy3Bd-0",
+    github: "",
+    tech: ["Photoshop"],
+  },
+  {
+    id: 7,
+    category: "uiux",
     title: "Finance Learning App",
     description:
       "UI/UX design for a personal finance learning app — from onboarding to interactive courses and expert consultations. Designed with Figma to deliver clarity, confidence, and engaging financial education.",
@@ -73,7 +95,29 @@ const projects = [
     tech: ["Figma", "Photoshop"],
   },
   {
-    id: 7,
+    id: 8,
+    category: "uiux",
+    title: "Inventory & Supplier System",
+    description:
+      "Desktop application UI/UX design for product and purchase order management. Features supplier and product records, price calculation, and order tracking. Designed with a modern interface for clarity, efficiency, and ease of use.",
+    image: "/assets/work/thumb12.png",
+    link: "https://www.figma.com/design/TBECYxNkp7TYuKgyOeLib1/Untitled?node-id=11-3&p=f&t=XZlHk0CEVBSg4OHv-0",
+    github: "",
+    tech: ["Figma", "Photoshop"],
+  },
+  {
+    id: 9,
+    category: "uiux",
+    title: "Management System",
+    description:
+      "A desktop application UI/UX design project focused on modern and user-friendly interfaces. Features a dark theme layout, intuitive navigation, and clear data management forms to simplify user workflow. Designed to demonstrate practical desktop application usability with a professional look.",
+    image: "/assets/work/thumb10.png",
+    link: "https://www.figma.com/design/AP3aUexnh6Py2RXL01TXpS/Project?node-id=0-1&p=f&t=gDTvfRK9Znt1is8r-0",
+    github: "",
+    tech: ["Figma",],
+  },
+  {
+    id: 10,
     category: "uiux",
     title: "Clinic Management",
     description:
@@ -83,8 +127,9 @@ const projects = [
     github: "",
     tech: ["Figma", "Photoshop"],
   },
+  
   {
-    id: 8,
+    id: 11,
     category: "freelance",
     title: "ISLogo DESIGNER",
     description:
@@ -94,6 +139,7 @@ const projects = [
     github: "",
     tech: ["Photoshop"],
   },
+  
 ];
 
 const categories = ["frontend", "uiux", "python", "freelance"];
@@ -153,6 +199,7 @@ const Project = () => {
                       disableOnInteraction: false,
                       pauseOnMouseEnter: true,
                     }}
+                    loop={true}
                     className="h-max xl:h-[460px] "
                   >
                     {projects
