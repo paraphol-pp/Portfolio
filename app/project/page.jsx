@@ -20,6 +20,40 @@ const projects = [
   {
     id: 1,
     category: "frontend",
+    title: "Final Project",
+    description:
+      "FixItHub is a community issue reporting platform built with Next.js and TailwindCSS. Users can submit reports with images, location, and categories such as road, water supply, or electrical issues. The system features authentication, CRUD operations, responsive UI, and an admin-friendly interface to manage and update reported cases.",
+    image: "/assets/work/thumb14.png",
+    link: "https://finalproject-fixithub.vercel.app",
+    github: "https://github.com/paraphol-pp/FinalProject-FixltHub",
+    tech: ["NextJS", "TailwindCSS", "TypeScript"],
+  },
+  {
+    id: 2,
+    category: "frontend",
+    title: "ZeplinGame",
+    description:
+      "ZeplinGame is a mini web application built with ReactJS and TailwindCSS that allows users to browse and explore games with real-time data from the RAWG API. Features include search, filtering, game details, responsive UI, and smooth user interaction.",
+    image: "/assets/work/thumb13.png",
+    link: "https://project-zeplin-game.vercel.app",
+    github: "https://github.com/paraphol-pp/Project-ZeplinGame",
+    tech: ["ReactJS", "TailwindCSS", "TypeScript"],
+  },
+  
+  {
+    id: 3,
+    category: "frontend",
+    title: "Portfolio Modern",
+    description:
+      "A modern portfolio website built with NextJS and TailwindCSS to showcase my projects and skills. Features smooth animations with Framer Motion, responsive design, and easy navigation to highlight my work effectively.",
+    image: "/assets/work/thumb0.png",
+    link: "https://portfolio-modern-theme.vercel.app/#home",
+    github: "https://github.com/paraphol-pp/Portfolio-Modern-Theme",
+    tech: ["NextJS", "TailwindCSS", "TypeScript"],
+  },
+  {
+    id: 4,
+    category: "frontend",
     title: "Website Concert",
     description:
       "A one-page website designed for promoting concerts. It provides event details, schedule, and ticket purchase links. Built with HTML, TailwindCSS, and JavaScript for responsive and modern UI.",
@@ -29,7 +63,7 @@ const projects = [
     tech: ["HTML", "TailwindCSS", "JavaScript"],
   },
   {
-    id: 2,
+    id: 5,
     category: "frontend",
     title: "Website Job Board",
     description:
@@ -40,7 +74,7 @@ const projects = [
     tech: ["HTML", "TailwindCSS", "JavaScript"],
   },
   {
-    id: 3,
+    id: 6,
     category: "frontend",
     title: "Website E-Commerce",
     description:
@@ -51,7 +85,7 @@ const projects = [
     tech: ["HTML", "CSS"],
   },
   {
-    id: 4,
+    id: 7,
     category: "python",
     title: "Zeppelin Cafe",
     description:
@@ -62,7 +96,7 @@ const projects = [
     tech: ["Python", "SQLite", "Photoshop"],
   },
   {
-    id: 5,
+    id: 8,
     category: "uiux",
     title: "Fashion Shopping App",
     description:
@@ -73,7 +107,7 @@ const projects = [
     tech: ["Figma", "Photoshop"],
   },
   {
-    id: 6,
+    id: 9,
     category: "uiux",
     title: "Hotel Management",
     description:
@@ -84,7 +118,7 @@ const projects = [
     tech: ["Photoshop"],
   },
   {
-    id: 7,
+    id: 10,
     category: "uiux",
     title: "Finance Learning App",
     description:
@@ -95,7 +129,7 @@ const projects = [
     tech: ["Figma", "Photoshop"],
   },
   {
-    id: 8,
+    id: 11,
     category: "uiux",
     title: "Inventory & Supplier System",
     description:
@@ -106,7 +140,7 @@ const projects = [
     tech: ["Figma", "Photoshop"],
   },
   {
-    id: 9,
+    id: 12,
     category: "uiux",
     title: "Management System",
     description:
@@ -117,7 +151,7 @@ const projects = [
     tech: ["Figma",],
   },
   {
-    id: 10,
+    id: 13,
     category: "uiux",
     title: "Clinic Management",
     description:
@@ -129,7 +163,7 @@ const projects = [
   },
   
   {
-    id: 11,
+    id: 14,
     category: "freelance",
     title: "ISLogo DESIGNER",
     description:
@@ -139,6 +173,7 @@ const projects = [
     github: "",
     tech: ["Photoshop"],
   },
+  
   
 ];
 
