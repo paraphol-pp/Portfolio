@@ -6,7 +6,7 @@ const Stats = () => {
 
       <div className="flex gap-4">
         <div className="text-5xl font-bold text-accent flex">
-          <CountUp end={3} duration={5} delay={2.5} className="่block" />
+          <CountUp end={4} duration={5} delay={2.5} className="่block" />
           <div>+</div>
         </div>
 

@@ -15,6 +15,7 @@ import {
   SiAdobepremierepro,
   SiAdobeillustrator,
   SiDotnet,
+  SiMysql,
 } from "react-icons/si";
 
 import {
@@ -24,7 +25,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 
-import { FaDatabase, FaPython, FaJava } from "react-icons/fa";
+import { FaPython, FaJava } from "react-icons/fa";
 
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -48,7 +49,7 @@ const skillCategories = [
       { icon: <FaJava />, name: "Java" },
       { icon: <TbBrandCSharp />, name: "C#" },
       { icon: <SiDotnet />, name: ".NET" },
-      { icon: <FaDatabase />, name: "SQLite" },
+      { icon: <SiMysql />, name: "mySQL" },
     ],
   },
   {
